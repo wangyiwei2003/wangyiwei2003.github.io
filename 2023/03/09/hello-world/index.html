@@ -52,17 +52,17 @@
     <!-- import link -->
     
         
-            
-        
-            
+            <link href="/bubbly-bg/bubbly.css" rel="stylesheet">
         
     
     <!-- import script -->
     
         
-            
+            <script src="/meihua/index.js"></script>
         
-            
+            <script src="/bubbly-bg/bubbly.js"></script>
+        
+            <script src="/bubbly-bg/index.js"></script>
         
     
 
@@ -211,6 +211,70 @@
     <div class="drawer-box-content">
       <ul class="drawer-box-content_menu">
         
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                  
+                  <span class="name">首页</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/archives" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-archive" aria-hidden="true"></i>
+                  
+                  <span class="name">归档</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/tags" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-tags" aria-hidden="true"></i>
+                  
+                  <span class="name">标签</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/categories" class="drawer-menu-item-link">
+                  
+                    <i class="fas fa-bookmark" aria-hidden="true"></i>
+                  
+                  <span class="name">分类</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/friends" class="drawer-menu-item-link">
+                  
+                  <span class="name">友链</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="/about" class="drawer-menu-item-link">
+                  
+                  <span class="name">关于我</span>
+                </a>
+              
+            </li>
+          
+        
         
           <li class="drawer-box-content_item">
             <a target="_blank" rel="noopener" href="https://github.com/yuang01/hexo-theme-bamboo">
@@ -281,6 +345,70 @@
     <nav class="navbar">
       <ul class="menu">
         
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/" class="menu-item-link" title="首页">
+                  
+                    <i class="fas fa-home" aria-hidden="true"></i>
+                  
+                  <span class="name">首页</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/archives" class="menu-item-link" title="归档">
+                  
+                    <i class="fas fa-archive" aria-hidden="true"></i>
+                  
+                  <span class="name">归档</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/tags" class="menu-item-link" title="标签">
+                  
+                    <i class="fas fa-tags" aria-hidden="true"></i>
+                  
+                  <span class="name">标签</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/categories" class="menu-item-link" title="分类">
+                  
+                    <i class="fas fa-bookmark" aria-hidden="true"></i>
+                  
+                  <span class="name">分类</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/friends" class="menu-item-link" title="友链">
+                  
+                  <span class="name">友链</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/about" class="menu-item-link" title="关于我">
+                  
+                  <span class="name">关于我</span>
+                </a>
+              
+            </li>
+          
+        
       </ul>
       
       
@@ -292,13 +420,13 @@
         <h2>
           <span>
             <i class="fas fa-search" aria-hidden="true"></i>
-            <span class="title">Search</span>
+            <span class="title">本地搜索</span>
           </span>
           <i class="fas fa-times close" pointer style="float:right;" aria-hidden="true" @click.self="cancelDialogVisible()"></i>
         </h2>
         <form class="site-search-form">
           <input type="text"
-            placeholder="Please enter keywords"
+            placeholder="请输入关键字"
             id="local-search-input" 
             @click="getSearchFile()"
             class="st-search-input"
@@ -422,12 +550,28 @@
     
       
         <span class="post-detail-header_date">
-          <i class="fas fa-calendar"></i> Published in：2023-03-09 |
+          <i class="fas fa-calendar"></i> 发表于：2023-03-09 |
         </span>
       
 
       
 
+      
+        <div class="post-detail-header_wordcount">
+          <span class="totalcount">
+            <i class="fas fa-file-text-o"></i> 字数统计: 75 |
+          </span>
+  
+          <span class="min2read">
+            <i class="fas fa-clock"></i> 阅读时长: 1分钟 |
+          </span>
+  
+          
+            <span class="reading">
+              <i class="fas fa-eye"></i> 阅读量：<span id="busuanzi_value_page_pv"></span>
+            </span>
+          
+        </div>
       
     
   </div>
@@ -468,16 +612,16 @@
         <div class="copyright">
   <ul class="post-copyright">
     <li class="post-copyright-author">
-    <strong>author:  </strong>王一维</a>
+    <strong>作者:  </strong>王一维</a>
     </li>
     <li class="post-copyright-link">
-    <strong>link:  </strong>
+    <strong>文章链接:  </strong>
     <a href="/2023/03/09/hello-world/" target="_blank" title="Hello World">http://example.com/2023/03/09/hello-world/</a>
     </li>
     <li class="post-copyright-license">
-      <strong>Copyright notice:   </strong>
-      All articles on this website, unless otherwise stated, adopt <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
-      reprint policy. If reproduced, please indicate source!
+      <strong>版权声明:   </strong>
+      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      许可协议。转载请注明出处!
     </li>
   </ul>
 <div>
@@ -1111,11 +1255,11 @@
             <!-- 不蒜子统计 -->
             <!-- 不蒜子统计 -->
 <span id="busuanzi_container_site_pv">
-      <i class="fas fa-eye" aria-hidden="true"></i>Total visits：<span id="busuanzi_value_site_pv"></span> times
+      <i class="fas fa-eye" aria-hidden="true"></i>本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
 </span>
 <span class="post-meta-divider">|</span>
 <span id="busuanzi_container_site_uv" style='display:none'>
-      <i class="fas fa-users" aria-hidden="true"></i>Number of visitors：<span id="busuanzi_value_site_uv"></span> people
+      <i class="fas fa-users" aria-hidden="true"></i>本站访客数：<span id="busuanzi_value_site_uv"></span> 人
 </span>
 
           
@@ -1511,7 +1655,7 @@
       },
       mounted() {
         const that = this;
-        var copy = 'copy';
+        var copy = '复制';
         /* code */
         var initCopyCode = function () {
           var copyHtml = '';
